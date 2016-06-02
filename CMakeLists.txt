@@ -16,5 +16,7 @@ include_directories("${PROJECT_SOURCE_DIR}/include")
 link_directories(/opt/vc/lib)
 
 add_executable(test src/test.cpp src/PiCapture.cpp)
+add_executable(recognition src/recognition.cpp src/PiCapture.cpp)
 
 target_link_libraries(test mmal_core mmal_util mmal_vc_client bcm_host ${OpenCV_LIBS})
+target_link_libraries(recognition mmal_core mmal_util mmal_vc_client bcm_host ${OpenCV_LIBS})
